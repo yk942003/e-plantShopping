@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './ProductList.css'
 import CartItem from './CartItem';
 import { addItem } from './CartSlice';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { addItem } from './CartSlice';
 
 function ProductList({ onHomeClick }) {
     const dispatch = useDispatch();
@@ -266,7 +267,7 @@ function ProductList({ onHomeClick }) {
             [product.name]: true, 
         }));
     };
-    
+
     return (
         <div>
             <div className="navbar" style={styleObj}>
